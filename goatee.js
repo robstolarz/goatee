@@ -1,5 +1,3 @@
-Function.prototype.toJSON = Function.prototype.toString;
-Object.prototype.toString = function(){return JSON.stringify(this)}
 function getAllMatches(regex,str,c){ //inline
 	var res, matches = [];
 	while((res = regex.exec(str)) !== null)
