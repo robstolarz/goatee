@@ -1,0 +1,106 @@
+body {
+	/* flex-container A */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	
+	/* look */
+	font-family: sans-serif;
+	margin: 0px
+}
+
+.recipe-picker {
+	/* flex-item A */
+	-webkit-flex: 1 1 66%;
+	flex: 1 1 66%;
+	
+}
+
+.sidebar {
+	/* flex-item A */
+	-webkit-flex: 1 1 9em;
+	flex: 1 1 9em;
+	
+	height: 100%; 
+}
+
+calendar {
+	
+	/* flex-container B */
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: column;
+	flex-flow: column;
+	
+	/* look */
+	overflow:auto;
+	overflow-y:auto;
+	overflow-x:none;
+	
+	background-color: papayawhip;
+}
+
+calendar day {
+	/* flex-item B */
+	-webkit-flex: 0 0 10em;
+	flex: 0 0 10em;
+	/*overflow:hidden;*/
+}
+
+calendar day {
+	/* look */
+	border: solid 1px black;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: .1em;
+	background-color: white;
+}
+
+calendar day:hover {
+	background-color: papayawhip;
+}
+
+calendar day count {
+	float: right;
+}
+
+.recipe-picker {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+	
+	align-self:center;
+	
+	overflow:auto;
+	overflow-y:auto;
+	overflow-x:none;
+	
+	background-color:springgreen;
+	height: 100%
+}
+
+.recipe-picker recipe {
+	-webkit-flex: 0 1 8em;
+	flex: 0 1 8em;
+	
+	height: 12em;
+	
+	border: solid 1px black;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: .1em;
+	
+	text-align: center;
+	vertical-align: bottom;
+	
+	background-color: white;
+}
+
+.recipe-picker recipe name {
+	vertical-align: bottom;
+	text-align: center;
+}

@@ -1,0 +1,22 @@
+<HTML>
+<HEAD>
+<script type="text/javascript" src="edit-order.js"></script>
+<link rel="stylesheet" type="text/css" href="edit-order.css" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+</HEAD>
+<BODY>
+	<calendar class="sidebar" id="calendar">
+		{{[days}}<day>
+			<count>{{#(days).index}}</count>
+			<ul>{{[#(days).item}}
+				<li>{{#(#(days).item).item}}</li>
+			{{]#(days).item}}</ul>
+		</day>{{]days}}
+	</calendar>
+	<div class="recipe-picker">
+		{{[recipes}}<recipe>
+			<name>{{#(recipes).item}}</name>
+		</recipe>{{]recipes}}
+	</div>
+</BODY>
+</HTML>
