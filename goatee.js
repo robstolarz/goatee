@@ -119,10 +119,11 @@ function buildFn(scope,inTransform,outTransform){
 			}
 			if(v.scope){ //iterative
 				var innerTemplate = buildFn(v.scope);
+				var mustache = v;
 				return function(ext,gen){ // ! c
 					return expr(ext,gen).map(function(v,i){
 						// set up gen-vironment
-						gen[v.string] = { //this is what you modify to extend the generated environment
+						gen[mustache.string] = { //this is what you modify to extend the generated environment
 							index:i, //which item are we getting?
 							item:v
 						};
