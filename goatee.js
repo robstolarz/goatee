@@ -121,14 +121,17 @@ function buildFn(scope,inTransform,outTransform){
 				var innerTemplate = buildFn(v.scope);
 				var mustache = v;
 				return function(ext,gen){ // ! c
-					return expr(ext,gen).map(function(v,i){
-						// set up gen-vironment
-						gen[mustache.string] = { //this is what you modify to extend the generated environment
-							index:i, //which item are we getting?
-							item:v
-						};
-						return innerTemplate(ext,gen) // pass the items through
-					}).join("");
+					var obj = expr(ext,gen), s = "";
+					for(var i in obj)
+						s += (function(v,i){
+							// set up gen-vironment
+							gen[mustache.string] = { //this is what you modify to extend the generated environment
+								index:i, //which item are we getting?
+								item:v
+							};
+							return innerTemplate(ext,gen) // pass the items through
+						})(obj[i],i);
+					return s;
 				}
 			}
 			throw"t";

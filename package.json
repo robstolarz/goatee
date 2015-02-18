@@ -1,6 +1,6 @@
 {
   "name": "goatee",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A templating library. Lightweight and uninsulting. More \"robust\" than Mustache.",
   "main": "goatee.js",
   "scripts": {
