@@ -1,0 +1,10 @@
+`{{datum_name}}` is replaced with whatever is at that index in the provided object
+
+`{{[array_name}}` is iterated across
+`#(array_name)` is the way to access an iterator, where `#(array_name).item` is the object returned at any given moment and `#(array_name).index` the index at which it was found ; it is possible to nest iterators, and they can be used with both arrays and objects
+`{{]array_name}}` ends the iteration of a template
+
+an example lies in `demo/` which makes clear the API
+
+practice not-doing,
+and everything will fall into place
