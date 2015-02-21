@@ -148,7 +148,6 @@ module.exports = {
 		var scopes = buildScopes(mustaches);
 		return scopes;
 	},
-	buildFn:buildFn,
-	buildParsedExpr:buildParsedExpr
+	buildFn:buildFn
 	
 }
