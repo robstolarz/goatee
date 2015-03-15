@@ -40,9 +40,11 @@ function getMustachesFromTemplate(template){
 		if(i != rMustaches.length - 1) //if the end mustache exists
 			sEnd = rMustaches[i+1].index; //find the end of the text (the beginning of the next 
 		else sEnd = template.length; //if it doesn't, copy to the end of the template
-		mustaches.push({ //add a new statement containing
-			data: template.substring(sBegin, sEnd)//the text string calculated 
-		});
+		var calculatedString = template.substring(sBegin, sEnd);
+		if(calculatedString != '') //if we're not attempting to add an empty statement
+			mustaches.push({ //add a new statement containing
+				data: calculatedString //the text string calculated 
+			});
 	}
 	return mustaches; //and send it on home
 }

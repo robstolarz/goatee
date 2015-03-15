@@ -1,6 +1,6 @@
 {
   "name": "goatee",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A templating library. Lightweight and uninsulting. More \"robust\" than Mustache.",
   "main": "goatee.js",
   "scripts": {
@@ -11,7 +11,6 @@
     "url": "https://github.com/callmeStriking/goatee.git"
   },
   "author": "Rob Stolarz",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/callmeStriking/goatee/issues"
   },
