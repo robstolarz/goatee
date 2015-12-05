@@ -11,7 +11,7 @@ function quoteForRegex(str) { //thanks StackOverflow
 
 function getMustachesFromTemplate(template){
 	var rMustaches = getAllMatches(
-		/({{(\S+)}})/g, 
+		/({{(\S+?)}})/g, 
 		template, 
 		function(res){
 			return {
