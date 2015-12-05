@@ -76,7 +76,7 @@ function buildScopes(mustaches){
 	return scope;
 }
 function dotsToBrackets(dots){
-	return dots.map(function(v){return '["'+v+'"]'}).join("")
+	return dots.map(function(v){return '["'+v.replace('"','\\"')+'"]'}).join("")
 }
 function buildParsedExpr(expr){ 
 	var clean = expr.replace(/\s/g,''); // toss whitespace (do I need this? eh, whatevs)
